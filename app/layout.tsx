@@ -27,7 +27,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="p-4 md:flex md:justify-center">
-            <div className="md:w-[1024px] flex flex-col gap-4">
+            <div className="md:w-[1024px] flex flex-col gap-8">
               <Header />
               {children}
             </div>
