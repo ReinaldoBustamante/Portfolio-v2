@@ -6,7 +6,7 @@ export const ToggleDarkMode = () => {
     const { toggleTheme } = useTheme()
 
     return (
-        <button onClick={toggleTheme} className="w-12 h-6 bg-white rounded-xl relative ml-4">
+        <button onClick={toggleTheme} className="w-12 h-6 bg-white rounded-xl relative">
             <div
                 className={`
                     absolute 

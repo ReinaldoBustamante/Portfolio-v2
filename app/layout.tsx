@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../context/ThemeProvider";
+import { Sidebar } from "@/components/Sidebar";
+import { ToggleDarkMode } from "@/components/ToggleDarkMode";
 
 
 const roboto = Roboto({
@@ -25,7 +27,13 @@ export default function RootLayout({
         className={`${roboto.className} dark:bg-[#303841] dark:text-white p-4`}
       >
         <ThemeProvider>
-          {children}
+          <div className="flex flex-col gap-4">
+            <div className="flex justify-between items-center">
+              <Sidebar />
+              <ToggleDarkMode />
+            </div>
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
