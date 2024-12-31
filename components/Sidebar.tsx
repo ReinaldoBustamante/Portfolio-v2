@@ -6,7 +6,7 @@ import { IoClose, IoMenu } from 'react-icons/io5'
 export const Sidebar = () => {
   const { isVisible, toggleSidebar } = useSidebar()
   return (
-    <div>
+    <div className='md:hidden'>
       <IoMenu size={36} onClick={toggleSidebar} />
       <div
         className={`
