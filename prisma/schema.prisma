@@ -14,15 +14,25 @@ datasource db {
 }
 
 model Experience {
-  id          Int      @id @default(autoincrement())
-  company     String
-  position    String
-  startDate   DateTime
-  endDate     DateTime
-  Description String
+  id           Int                     @id @default(autoincrement())
+  company      String
+  position     String
+  startDate    DateTime
+  endDate      DateTime
+  description  String
+  technologies Experience_technology[]
+}
+
+model Experience_technology {
+  id           Int        @id @default(autoincrement())
+  experienceId Int
+  technologyId Int
+  Experience   Experience @relation(fields: [experienceId], references: [id])
+  Technology   Technology @relation(fields: [technologyId], references: [id])
 }
 
 model Technology {
-  id   Int    @id @default(autoincrement())
-  name String
+  id         Int                     @id @default(autoincrement())
+  name       String
+  Experience Experience_technology[]
 }
