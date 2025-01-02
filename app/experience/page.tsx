@@ -36,7 +36,7 @@ export default async function ExperiencePage() {
                 <div className="ml-4 w-full flex flex-col gap-3">
                   <div className="flex flex-col">
                     <h2 className="text-2xl font-semibold">{experience.position}</h2>
-                    <span className="font-semibold text-blue-500 text-xl">{experience.company}</span>
+                    <span className="font-semibold text-blue-500 dark:text-[#00ADB5] text-xl">{experience.company}</span>
                     <span className="text-gray-500 text-lg">{formattedRange} </span>
 
                   </div>
