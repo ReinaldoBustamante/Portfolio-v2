@@ -1,8 +1,17 @@
 import { Experience } from "@/domain/models/Experience";
 
 export default async function ExperiencePage() {
-  const experienceResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/experience`, { cache: "force-cache" })
-  const experiences: Experience[] = await experienceResponse.json()
+  let experiences: Experience[] = [];
+  //const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  try {
+    const experienceResponse = await fetch(`http://localhost:3000/api/experience`)
+    if (!experienceResponse.ok) {
+      throw new Error(`Failed to fetch: ${experienceResponse.statusText}`);
+    }
+    experiences = await experienceResponse.json()
+  } catch (error) {
+    console.log("error", error)
+  }
 
 
   return (
