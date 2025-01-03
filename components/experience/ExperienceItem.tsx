@@ -13,7 +13,7 @@ export const ExperienceItem = ({ experience }: { experience: Experience }) => {
       <div className="flex gap-2 flex-wrap">
         {
           experience.technologies.map((tech) => {
-            return <Technology technology={tech} />
+            return <Technology technology={tech} key={tech} />
           })
         }
       </div>
