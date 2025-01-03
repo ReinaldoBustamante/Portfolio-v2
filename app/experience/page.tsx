@@ -14,8 +14,8 @@ export default async function ExperiencePage() {
           {
             experiences.map((experience) => {
 
-              const startDate = new Date("2023-03-01T00:00:00");
-              const endDate = new Date("2024-04-01T00:00:00");
+              const startDate = new Date(experience.startDate);
+              const endDate = new Date(experience.endDate);
 
               // Utilizamos toLocaleDateString con la zona horaria de Chile
               const formattedStartDate = startDate.toLocaleDateString('es-ES', {
