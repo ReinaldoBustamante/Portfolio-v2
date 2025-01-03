@@ -12,7 +12,7 @@ export const Sidebar = () => {
         className={`
           z-10 
           w-screen 
-          h-svh 
+          h-screen
           text-white
           bg-[#3384F6] 
           dark:bg-[#3A4750] 
@@ -26,8 +26,8 @@ export const Sidebar = () => {
         `}
       >
         <div className="p-4 flex flex-col gap-4 items-center h-svh">
-          <IoClose size={36} onClick={toggleSidebar} className='self-end'/>
-          <ul className="flex flex-col gap-4 justify-center items-center mt-32">
+          <IoClose size={36} onClick={toggleSidebar} className='self-end' />
+          <ul className="flex flex-col gap-8 justify-center items-center mt-32">
             <li><Link href={'/'} onClick={toggleSidebar} className='font-bold text-[32px]'>INICIO</Link></li>
             <li><Link href={'/experience'} onClick={toggleSidebar} className='font-bold text-[32px]'>EXPERIENCIA</Link></li>
             <li><Link href={'/projects'} onClick={toggleSidebar} className='font-bold text-[32px]'>PROYECTOS</Link></li>

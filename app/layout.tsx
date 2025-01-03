@@ -26,8 +26,8 @@ export default function RootLayout({
         className={`${roboto.className} dark:bg-[#303841] dark:text-white`}
       >
         <ThemeProvider>
-          <div className="p-4 md:flex md:justify-center">
-            <div className="md:w-[1024px] flex flex-col gap-8">
+          <div className="h-svh overflow-y-auto p-4 md:flex md:justify-center ">
+            <div className="md:w-[1024px] flex flex-col gap-8  ">
               <Header />
               {children}
             </div>

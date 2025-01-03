@@ -1,9 +1,9 @@
 export interface Experience {
-    id: string;
+    id: number;
     position: string;
     company: string;
     description: string;
-    technologies: string[]; // IDs de tecnologías relacionadas.
+    technologies: string[];
     startDate: Date;
     endDate: Date
 }
