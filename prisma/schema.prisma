@@ -31,8 +31,27 @@ model Experience_technology {
   Technology   Technology @relation(fields: [technologyId], references: [id])
 }
 
+model Project_technology {
+  id           Int        @id @default(autoincrement())
+  projectId    Int
+  technologyId Int
+  Project      Project    @relation(fields: [projectId], references: [id])
+  Technology   Technology @relation(fields: [technologyId], references: [id])
+}
+
 model Technology {
   id         Int                     @id @default(autoincrement())
   name       String
   Experience Experience_technology[]
+  Project    Project_technology[]
+}
+
+model Project {
+  id           Int                  @id @default(autoincrement())
+  title        String
+  description  String
+  preview_url  String
+  repo_url     String
+  image_url    String
+  technologies Project_technology[]
 }
