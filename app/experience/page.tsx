@@ -2,9 +2,9 @@ import { Experience } from "@/domain/models/Experience";
 
 export default async function ExperiencePage() {
   let experiences: Experience[] = [];
-  //const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
   try {
-    const experienceResponse = await fetch(`http://localhost:3000/api/experience`)
+    const experienceResponse = await fetch(`${apiUrl}/experience`)
     if (!experienceResponse.ok) {
       throw new Error(`Failed to fetch: ${experienceResponse.statusText}`);
     }
