@@ -1,18 +1,8 @@
-import { Experience } from "@/domain/models/Experience";
+import { getAllExperiences } from "@/domain/services/experience";
 
 export default async function ExperiencePage() {
-  let experiences: Experience[] = [];
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-  try {
-    const experienceResponse = await fetch(`${apiUrl}/experience`)
-    if (!experienceResponse.ok) {
-      throw new Error(`Failed to fetch: ${experienceResponse.statusText}`);
-    }
-    experiences = await experienceResponse.json()
-  } catch (error) {
-    console.log("error", error)
-  }
 
+  const experiences = await getAllExperiences()
 
   return (
     <div className="relative">
