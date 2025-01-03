@@ -4,7 +4,7 @@ import { ExperienceItem } from './ExperienceItem'
 export const ExperienceList = ({ experiences }: { experiences: Experience[] }) => {
 
     return (
-        <div className="flex flex-row mt-4 ">
+        <div className="flex flex-row mt-8 ">
             <div className="w-3 bg-[#3384f681] dark:bg-[#00acb5ab] rounded ml-[4px]" />
             <div className="flex mt-4 flex-col gap-8 w-full">
                 {

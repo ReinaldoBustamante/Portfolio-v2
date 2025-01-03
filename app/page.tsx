@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function HomePage() {
 
   return (
-    <main className="flex flex-col gap-6">
+    <main className="flex flex-col gap-6 md:mt-8 md:gap-8">
       <div className="flex flex-col gap-2">
         <h1 className="text-7xl font-bold">Hola, soy Reinaldo</h1>
         <span className="text-3xl font-bold text-[#3384F6] dark:text-[#00ADB5]">Desarrollador full-stack</span>
@@ -19,7 +19,6 @@ export default function HomePage() {
         Conoce mis proyectos
       </Link>
       <Contact />
-
     </main>
   );
 }

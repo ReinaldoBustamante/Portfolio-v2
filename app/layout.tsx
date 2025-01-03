@@ -27,7 +27,7 @@ export default function RootLayout({
       >
         <ThemeProvider>
           <div className="h-svh overflow-y-auto p-4 md:flex md:justify-center ">
-            <div className="md:w-[1024px] flex flex-col gap-8  ">
+            <div className="md:w-[1024px] flex flex-col gap-8">
               <Header />
               {children}
             </div>
