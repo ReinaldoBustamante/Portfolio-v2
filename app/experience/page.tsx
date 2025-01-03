@@ -1,7 +1,7 @@
 import { Experience } from "@/domain/models/Experience";
 
 export default async function ExperiencePage() {
-  const experienceResponse = await fetch("http://localhost:3000/api/experience", { cache: "force-cache" })
+  const experienceResponse = await fetch(`${process.env.API_URL}/experience`, { cache: "force-cache" })
   const experiences: Experience[] = await experienceResponse.json()
 
 
