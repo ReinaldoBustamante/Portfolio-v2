@@ -1,9 +1,5 @@
-import { Technology } from "@/components/experience/Technology";
 import { Project } from "@/components/projects/Project";
 import { getAllProjects } from "@/domain/services/projects";
-import Image from "next/image";
-import Link from "next/link";
-import { IoLogoGithub, IoLink } from "react-icons/io5";
 
 export default async function ProjectsPage() {
 
