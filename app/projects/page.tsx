@@ -1,8 +1,15 @@
 import { Project } from "@/components/projects/Project";
 import { getAllProjects } from "@/domain/services/projects";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Reinaldo Bustamante | Proyectos personales",
+  description: "Descubre los proyectos personales de Reinaldo Bustamante, Ingeniero Civil Informático especializado en desarrollo web. Proyectos en React, Node.js, y más",
+  keywords: "Reinaldo Bustamante, proyectos personales, desarrollo web, full stack, React, Node.js, proyectos, portafolio, ingeniería informática, soluciones tecnológicas",
+};
 
 export default async function ProjectsPage() {
-
   const projects = await getAllProjects()
   console.log(projects)
   return (

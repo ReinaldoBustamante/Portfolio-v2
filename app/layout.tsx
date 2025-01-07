@@ -12,7 +12,8 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: "Reinaldo Bustamante",
-  description: "Portafolio personal de reinaldo bustamante",
+  description: "Soy Reinaldo Bustamante, Ingeniero Civil Informático especializado en desarrollo web full stack. Descubre mis proyectos, habilidades y experiencia.",
+  keywords: "Reinaldo Bustamante, Ingeniero Civil Informático, desarrollo web, full stack, frontend, backend, desarrollador web, Valdivia, Chile, portafolio profesional, React, Node.js, Next.js",
 };
 
 export default function RootLayout({
