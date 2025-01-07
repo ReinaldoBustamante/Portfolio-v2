@@ -1,7 +1,8 @@
-import { Contact } from "@/components/Contact";
+import { ExternalButton } from "@/components/ExternalButton";
 import Link from "next/link";
-export default function HomePage() {
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
+export default function HomePage() {
   return (
     <main className="flex flex-col gap-6 md:mt-8 md:gap-8">
       <div className="flex flex-col gap-2">
@@ -18,7 +19,13 @@ export default function HomePage() {
       >
         Conoce mis proyectos
       </Link>
-      <Contact />
+      <div className="flex flex-col gap-2">
+        <h2 className="text-xl">Puedes encontrarme en:</h2>
+        <ul className="flex gap-2">
+          <li><ExternalButton name={"GitHub"} url={"https://github.com/ReinaldoBustamante"} icon={<IoLogoGithub size={32} />} /></li>
+          <li><ExternalButton name={"Linkedin"} url={"https://www.linkedin.com/in/rbust"} icon={<IoLogoLinkedin size={32} />} /></li>
+        </ul>
+      </div>
     </main>
   );
 }

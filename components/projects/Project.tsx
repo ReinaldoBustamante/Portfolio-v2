@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Link from "next/link";
 import { IoLogoGithub, IoLink } from "react-icons/io5";
 import { Technology } from "@/components/experience/Technology";
 import { ProjectType } from "@/domain/models/Project";
+import { ExternalButton } from "../ExternalButton";
 
 export const Project = ({ project, index }: { project: ProjectType, index: number }) => {
-    console.log((index + 1) % 2)
     return (
         <div className="flex flex-col gap-4 border-b-2 pb-8 border-blue-300 md:border-none border-rounded md:flex-row md:gap-8">
             <Image
@@ -29,26 +28,8 @@ export const Project = ({ project, index }: { project: ProjectType, index: numbe
                 <p>{project.description}</p>
                 <div className="mt-auto">
                     <ul className="flex gap-2">
-                        <li>
-                            <Link
-                                href={project.repo_url}
-                                target="_blank"
-                                className="text-[18px] border-[1px] border-[#3384F6] dark:border-[#00ADB5] text-[#3384F6] dark:text-[#00ADB5] px-3 py-2 rounded flex gap-1 items-center"
-                            >
-                                <IoLogoGithub size={32} />
-                                <p>Repositorio</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link
-                                href={project.preview_url}
-                                target="_blank"
-                                className="text-[18px] border-[1px] border-[#3384F6] dark:border-[#00ADB5] text-[#3384F6] dark:text-[#00ADB5] px-3 py-2 rounded flex gap-1 items-center"
-                            >
-                                <IoLink size={32} />
-                                <p>Enlace</p>
-                            </Link>
-                        </li>
+                        <li><ExternalButton name={"Repositorio"} url={project.repo_url} icon={<IoLogoGithub size={32} />} /></li>
+                        <li><ExternalButton name={"Enlace"} url={project.preview_url} icon={<IoLink size={32} />} /></li>
                     </ul>
                 </div>
             </div>

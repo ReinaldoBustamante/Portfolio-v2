@@ -11,7 +11,6 @@ export const metadata: Metadata = {
 
 export default async function ProjectsPage() {
   const projects = await getAllProjects()
-  console.log(projects)
   return (
     <div className="md:mt-8">
       <h1 className="text-3xl font-bold">Proyectos</h1>
