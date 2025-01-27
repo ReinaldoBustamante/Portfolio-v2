@@ -12,7 +12,12 @@ export const Project = ({ project, index }: { project: ProjectType, index: numbe
                 alt={project.title}
                 width={558}
                 height={500}
+                sizes="(max-width: 768px) 100vw, 558px"
+                priority
+                placeholder="empty"
+
                 className={`rounded-lg ${(index + 1) % 2 === 0 ? 'md:order-1' : 'md:order-0'}`}
+
             />
             <div className="flex flex-col w-full gap-6 md:gap-4 ">
                 <div className="flex flex-col gap-2">
