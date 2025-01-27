@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default async function ProjectsPage() {
   const projects = await getAllProjects()
   return (
-    <div className="md:mt-8">
+    <div className="md:mt-8 animate-fadeIn">
       <h1 className="text-3xl font-bold">Proyectos</h1>
       <div className="flex flex-col gap-8 mt-8">
         {

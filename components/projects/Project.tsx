@@ -15,7 +15,6 @@ export const Project = ({ project, index }: { project: ProjectType, index: numbe
                 sizes="(max-width: 768px) 100vw, 558px"
                 priority
                 placeholder="empty"
-
                 className={`rounded-lg ${(index + 1) % 2 === 0 ? 'md:order-1' : 'md:order-0'}`}
 
             />

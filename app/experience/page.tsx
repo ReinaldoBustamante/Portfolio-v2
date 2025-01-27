@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default async function ExperiencePage() {
     const experiences = await getAllExperiences()
     return (
-        <div className="relative md:mt-8 pb-4">
+        <div className="relative md:mt-8 pb-4 animate-fadeIn">
             <h1 className="text-3xl font-bold">Experiencia laboral</h1>
             <ExperienceList experiences={experiences} />
         </div >

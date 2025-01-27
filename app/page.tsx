@@ -4,7 +4,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col gap-6 md:mt-8 md:gap-8">
+    <main className="flex flex-col gap-6 md:mt-8 md:gap-8 animate-fadeIn">
       <div className="flex flex-col gap-2">
         <h1 className="text-7xl font-bold">Hola, soy Reinaldo</h1>
         <span className="text-3xl font-bold text-[#3384F6] dark:text-[#00ADB5]">Desarrollador full-stack</span>
